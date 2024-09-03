@@ -11,6 +11,7 @@ public class Calculadora {
         int valor2 = 0;
         int resultado = 0;
 
+
         while (!valor.equals("6")) {
             System.out.println("\n1-Adição\n2-Subtração\n3-Multiplicação\n4-Divisão\n5-Módulo\n6-Sair");
             System.out.println("Escolha uma operação:");
