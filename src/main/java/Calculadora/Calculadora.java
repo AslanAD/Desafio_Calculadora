@@ -73,10 +73,10 @@ public class Calculadora {
 
                 default:
                     System.out.println("Valor inválido!");
+                    System.out.println("Digite um valor válido!");
                     break;
             }
 
-            entrada.nextLine();
         }
 
         entrada.close();
