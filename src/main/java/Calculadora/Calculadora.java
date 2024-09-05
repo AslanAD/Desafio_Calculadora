@@ -7,63 +7,152 @@ public class Calculadora {
         Scanner entrada = new Scanner(System.in);
 
         String valor = "";
-        int valor1 = 0;
-        int valor2 = 0;
-        int resultado = 0;
+        double valor1 = 0;
+        double valor2 = 0;
+        double resultado = 0;
+        boolean num = false;
 
 
         while (!valor.equals("6")) {
             System.out.println("\n1-Adição\n2-Subtração\n3-Multiplicação\n4-Divisão\n5-Módulo\n6-Sair");
             System.out.println("Escolha uma operação:");
-            valor = entrada.nextLine();
+            valor = entrada.next();
 
             switch (valor) {
                 case "1":
-                    System.out.println("Digite o primeiro valor:");
-                    valor1 = entrada.nextInt();
-                    System.out.println("Digite o segundo valor:");
-                    valor2 = entrada.nextInt();
+                    System.out.println("Digite um valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor1 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    System.out.println("Digite outro valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor2 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
                     resultado = valor1 + valor2;
                     System.out.println("Resultado = " + resultado);
                     break;
-
                 case "2":
-                    System.out.println("Digite o primeiro valor:");
-                    valor1 = entrada.nextInt();
-                    System.out.println("Digite o segundo valor:");
-                    valor2 = entrada.nextInt();
+                    System.out.println("Digite um valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor1 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    System.out.println("Digite outro valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor2 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
                     resultado = valor1 - valor2;
                     System.out.println("Resultado = " + resultado);
                     break;
-
                 case "3":
-                    System.out.println("Digite o primeiro valor:");
-                    valor1 = entrada.nextInt();
-                    System.out.println("Digite o segundo valor:");
-                    valor2 = entrada.nextInt();
+                    System.out.println("Digite um valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor1 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    System.out.println("Digite outro valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor2 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
                     resultado = valor1 * valor2;
                     System.out.println("Resultado = " + resultado);
                     break;
-
                 case "4":
-                    System.out.println("Digite o primeiro valor:");
-                    valor1 = entrada.nextInt();
-                    System.out.println("Digite o segundo valor:");
-                    valor2 = entrada.nextInt();
-                    if (valor2 == 0) {
-                        System.out.println("Não existe divisão por 0");
-                    } else {
-                        resultado = valor1 / valor2;
-                        System.out.println("Resultado = " + resultado);
+                    System.out.println("Digite um valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor1 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
                     }
+                    System.out.println("Digite outro valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor2 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    if (valor2 == 0) {
+                        System.out.println("Divisão inválida.");
+                    } else
+                        resultado = valor1 / valor2;
+                    System.out.println("Resultado = " + resultado);
                     break;
-
                 case "5":
-                    System.out.println("Digite o primeiro valor:");
-                    valor1 = entrada.nextInt();
-                    System.out.println("Digite o segundo valor:");
-                    valor2 = entrada.nextInt();
-                    resultado = valor1 % valor2;
+                    System.out.println("Digite um valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor1 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    System.out.println("Digite outro valor: ");
+                    while (!num) {
+                        if (!entrada.hasNextDouble()) {
+                            System.out.println("Digite um número válido.");
+                            entrada.next().replace(",",".");
+                        } else {
+                            valor2 = entrada.nextDouble();
+                            entrada.nextLine().replace(",",".");
+                            break;
+                        }
+                    }
+                    if (valor2 == 0) {
+                        System.out.println("Divisão inválida.");
+                    } else
+                        resultado = valor1 % valor2;
                     System.out.println("Resultado = " + resultado);
                     break;
 
